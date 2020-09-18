@@ -19,13 +19,13 @@ public class Main {
             case 2:
                 System.out.println("Digite a sequencia desejada de caracteres:");
                 input = read.next();
-                if (ValidadorAlfabeto.validarAlfabeto( Tratamento.lerDigitacao(input)))
+                ArrayList<String> inputData = Tratamento.lerDigitacao(input);
+                boolean valiAlfab = ValidadorAlfabeto.validarAlfabeto(inputData);
+                System.out.println(ValidadorAlfabeto.mostraResultado(valiAlfab));
+                if (valiAlfab)
                 {
-                     System.out.println("Aguarde a leitura dos dados");
-                }
-                else
-                {
-                    System.out.println("Os dados informados não pertencem ao alfabeto permitido : <{[()]}>");
+                    System.out.println(AnalisadorSintatico.mostraResultado(AnalisadorSintatico.validadorSintatico(inputData)));
+                    AnalisadorSintatico.validadorSintatico(inputData);
                 }
         }
     }

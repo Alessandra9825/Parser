@@ -4,13 +4,15 @@ public class ValidadorAlfabeto {
 
     public static  boolean validarAlfabeto (ArrayList<String> input  )
     {
-        if (input.stream().count()>0)
+        if (input.size()>0)
         {
             for (String item:input)
             {
-                if(item.equals("<")||item.equals(">")||item.equals("{")||item.equals("}")||item.equals("[")||item.equals("]")||item.equals("(")||item.equals(")"))
+                if(item.equals("<")||item.equals(">")||item.equals("{")
+                        ||item.equals("}")||item.equals("[")||item.equals("]")
+                        ||item.equals("(")||item.equals(")"))
                 {
-                  continue;
+                    continue;
                 }
                 else
                 {
@@ -19,5 +21,19 @@ public class ValidadorAlfabeto {
             }
         }
         return true;
+    }
+
+    public static String mostraResultado (boolean valor)
+    {
+        if (valor)
+        {
+
+            return ("Aguarde a leitura dos dados");
+
+        }
+        else
+        {
+            return ("Os dados informados não pertencem ao alfabeto permitido : <{[()]}>");
+        }
     }
 }

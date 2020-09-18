@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Console" />
+    <orderEntry type="module" module-name="Programa" />
   </component>
 </module>
