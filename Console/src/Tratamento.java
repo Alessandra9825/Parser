@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 public class Tratamento
 {
-    public final static String diretorio = System.getProperty("user.dir") + "\\File.txt";
+    public final static String diretorio = System.getProperty("user.dir") + "\\validar.txt";
     public static boolean validaTxt() throws IOException {
         if (Files.exists(Paths.get(diretorio)))
         {

@@ -1,12 +1,13 @@
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class AnalisadorSintatico {
     public static boolean validadorSintatico (ArrayList<String> inputValidate)
     {
         ArrayList<String> simbolOpen = new ArrayList<>();
-        int contValidos = 0;
+        double contValidos = 0;
         for ( int i = 0; i<inputValidate.size();i++)
         {
             if (inputValidate.get(i).equals("<")||inputValidate.get(i).equals("{")||inputValidate.get(i).equals("[")||
@@ -29,7 +30,8 @@ public class AnalisadorSintatico {
                 }
             }
         }
-        if (simbolOpen.size() == 0 &&  contValidos == (inputValidate.size()/2))
+        double qtPares = inputValidate.size()/2.00;
+        if (simbolOpen.size() == 0 &&  contValidos == qtPares)
         {
             return true;
         }
