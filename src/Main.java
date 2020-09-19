@@ -54,7 +54,7 @@ public class Main {
             }
         }catch (Exception err)
         {
-            System.out.println("Ops, algum erro presente na sua digitação: "+err);
+            System.out.println("Ops, algum erro ocorreu durante a sua digitação ");
         }
     }
 }
