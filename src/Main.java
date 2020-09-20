@@ -39,6 +39,7 @@ public class Main {
                         System.out.println(ValidadorAlfabeto.mostraResultado(valiAlfab));
                         if (valiAlfab) {
                             System.out.println(AnalisadorSintatico.mostraResultado(AnalisadorSintatico.validadorSintatico(inputData)));
+                            AnalisadorSintatico.validadorSintatico(inputData);
                         }
                         break;
                     default:

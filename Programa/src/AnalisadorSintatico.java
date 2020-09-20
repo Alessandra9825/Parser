@@ -1,5 +1,4 @@
 import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -16,17 +15,14 @@ public class AnalisadorSintatico {
                 simbolOpen.add(inputValidate.get(i));
 
             }
-            else{
-                for (int o=0;o<simbolOpen.size();o++)
+            else {
+                if (simbolOpen.get(simbolOpen.size()-1).equals("<") && inputValidate.get(i).equals(">")
+                        || simbolOpen.get(simbolOpen.size()-1).equals("{") && inputValidate.get(i).equals("}")
+                        ||simbolOpen.get(simbolOpen.size()-1).equals("(") && inputValidate.get(i).equals(")")
+                        ||simbolOpen.get(simbolOpen.size()-1).equals("[") && inputValidate.get(i).equals("]"))
                 {
-                    if (simbolOpen.get(o).equals("<") && inputValidate.get(i).equals(">")
-                        || simbolOpen.get(o).equals("{") && inputValidate.get(i).equals("}")
-                        ||simbolOpen.get(o).equals("(") && inputValidate.get(i).equals(")")
-                        ||simbolOpen.get(o).equals("[") && inputValidate.get(i).equals("]"))
-                    {
-                        contValidos++;
-                        simbolOpen.remove(simbolOpen.get(o));
-                    }
+                    contValidos++;
+                    simbolOpen.remove(simbolOpen.get(simbolOpen.size()-1));
                 }
             }
         }
