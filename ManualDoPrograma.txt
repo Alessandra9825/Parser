@@ -1,0 +1,8 @@
+Manual do Programa
+
+	O programa tem como finalidade validar o balanciamento de simbolos, sendo apenas permitido os simbolos <>,{},[] e (),
+possui duas formas de validação:
+		1.) Você pode inserir a cadeia de caracter diretamente no console, que devolve se esta balanceado ou não.
+		2.) Você pode inserir a cadeia de caracter diretamente no arquivo txt que acompanha o programa. no entanto o 
+		o arquivo sera validado como um todo e não por linhas.Ao final do processamento o  programa retornara se o arquivo
+		inteiro esta ou nao balanceado.

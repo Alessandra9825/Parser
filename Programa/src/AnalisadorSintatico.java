@@ -15,7 +15,7 @@ public class AnalisadorSintatico {
                 simbolOpen.add(inputValidate.get(i));
 
             }
-            else {
+            else if(simbolOpen.size()>0) {
                 if (simbolOpen.get(simbolOpen.size()-1).equals("<") && inputValidate.get(i).equals(">")
                         || simbolOpen.get(simbolOpen.size()-1).equals("{") && inputValidate.get(i).equals("}")
                         ||simbolOpen.get(simbolOpen.size()-1).equals("(") && inputValidate.get(i).equals(")")
